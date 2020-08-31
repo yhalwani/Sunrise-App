@@ -10,7 +10,7 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh 'npm run test'
+        sh 'npm run test --no-watch --no-progress --browsers=ChromeHeadless'
       }
     }
 
