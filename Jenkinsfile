@@ -16,7 +16,8 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        sh 'mv ./dist/sunrise-app /srv/sunrise-app'
+        sh 'rm -r /srv/sunrise-app'
+        sh 'mv ./dist/sunrise-app /srv/'
       }
     }
 
